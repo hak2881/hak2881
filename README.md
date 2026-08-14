@@ -1,4 +1,4 @@
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:1F6FEB,100:58A6FF&height=200&section=header&text=hak2881&fontSize=60&fontColor=FFFFFF&fontAlignY=36&desc=Backend%20Engineer%20·%20Commerce%20Platforms&descAlignY=58&descSize=18" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:1F6FEB,100:58A6FF&height=200&section=header&text=ByungHak%20Kim&fontSize=54&fontColor=FFFFFF&fontAlignY=36&desc=Backend%20Engineer%20·%20Commerce%20Platforms&descAlignY=58&descSize=18" />
 
 <div align="center">
 
