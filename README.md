@@ -205,51 +205,72 @@ Windows 키오스크 앱 + **C++ 카메라 SDK 사이드카**
 
 <table>
 <tr>
-<td width="50%">
+<td width="50%" valign="top">
 
-[![commerce-backend-msa](https://github-readme-stats.vercel.app/api/pin/?username=hak2881&repo=commerce-backend-msa&bg_color=00000000&text_color=768390&title_color=4493F8&icon_color=4493F8&border_color=30363D&description_lines_count=3)](https://github.com/hak2881/commerce-backend-msa)
+<a href="https://github.com/hak2881/commerce-backend-msa"><img src="https://img.shields.io/badge/commerce--backend--msa-0D1117?style=for-the-badge&logo=go&logoColor=00ADD8" /></a>
 
-</td>
-<td width="50%">
+커머스 플랫폼 뒤의 **백엔드 마이크로서비스**.
+서비스 경계, 웹훅 멱등성, 서비스 6개를 배포 1개로 합치는 판단.
 
-[![loyalty-ledger-systems](https://github-readme-stats.vercel.app/api/pin/?username=hak2881&repo=loyalty-ledger-systems&bg_color=00000000&text_color=768390&title_color=4493F8&icon_color=4493F8&border_color=30363D&description_lines_count=3)](https://github.com/hak2881/loyalty-ledger-systems)
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-[![erp-integration-patterns](https://github-readme-stats.vercel.app/api/pin/?username=hak2881&repo=erp-integration-patterns&bg_color=00000000&text_color=768390&title_color=4493F8&icon_color=4493F8&border_color=30363D&description_lines_count=3)](https://github.com/hak2881/erp-integration-patterns)
+<img src="https://img.shields.io/badge/-3_cases-30363D?style=flat-square" /> <img src="https://img.shields.io/badge/-Go-00ADD8?style=flat-square" /> <img src="https://img.shields.io/badge/-FastAPI-009688?style=flat-square" /> <img src="https://img.shields.io/badge/-Kubernetes-326CE5?style=flat-square" />
 
 </td>
-<td width="50%">
+<td width="50%" valign="top">
 
-[![storefront-engineering](https://github-readme-stats.vercel.app/api/pin/?username=hak2881&repo=storefront-engineering&bg_color=00000000&text_color=768390&title_color=4493F8&icon_color=4493F8&border_color=30363D&description_lines_count=3)](https://github.com/hak2881/storefront-engineering)
+<a href="https://github.com/hak2881/loyalty-ledger-systems"><img src="https://img.shields.io/badge/loyalty--ledger--systems-0D1117?style=for-the-badge&logo=databricks&logoColor=4493F8" /></a>
+
+포인트·등급·리워드의 **원장 설계**.
+정수 금액, 예약-확정 차감, 등급 개편 사전 시뮬레이션.
+
+<img src="https://img.shields.io/badge/-4_cases-30363D?style=flat-square" /> <img src="https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat-square" /> <img src="https://img.shields.io/badge/-Go-00ADD8?style=flat-square" /> <img src="https://img.shields.io/badge/-Idempotency-8957E5?style=flat-square" />
 
 </td>
 </tr>
 <tr>
-<td width="50%">
+<td width="50%" valign="top">
 
-[![ai-experience-platform](https://github-readme-stats.vercel.app/api/pin/?username=hak2881&repo=ai-experience-platform&bg_color=00000000&text_color=768390&title_color=4493F8&icon_color=4493F8&border_color=30363D&description_lines_count=3)](https://github.com/hak2881/ai-experience-platform)
+<a href="https://github.com/hak2881/erp-integration-patterns"><img src="https://img.shields.io/badge/erp--integration--patterns-0D1117?style=for-the-badge&logo=databricks&logoColor=BF8700" /></a>
+
+**ERP 앞에 B2B 스토어프론트** 붙이기.
+주문 동기화, 해상 운임 견적, 스케줄 재고 대사.
+
+<img src="https://img.shields.io/badge/-4_cases-30363D?style=flat-square" /> <img src="https://img.shields.io/badge/-FastAPI-009688?style=flat-square" /> <img src="https://img.shields.io/badge/-Webhooks-1F6FEB?style=flat-square" /> <img src="https://img.shields.io/badge/-B2B-BF8700?style=flat-square" />
 
 </td>
-<td width="50%">
+<td width="50%" valign="top">
 
-[![platform-tooling](https://github-readme-stats.vercel.app/api/pin/?username=hak2881&repo=platform-tooling&bg_color=00000000&text_color=768390&title_color=4493F8&icon_color=4493F8&border_color=30363D&description_lines_count=3)](https://github.com/hak2881/platform-tooling)
+<a href="https://github.com/hak2881/storefront-engineering"><img src="https://img.shields.io/badge/storefront--engineering-0D1117?style=for-the-badge&logo=shopify&logoColor=7AB55C" /></a>
+
+**브랜드 1,067개** 마켓플레이스 테마.
+공유 파일 분해, AJAX 필터 상태, 네이티브 전환 3회 실패 기록.
+
+<img src="https://img.shields.io/badge/-4_cases-30363D?style=flat-square" /> <img src="https://img.shields.io/badge/-Liquid-7AB55C?style=flat-square" /> <img src="https://img.shields.io/badge/-Vanilla_JS-F7DF1E?style=flat-square" /> <img src="https://img.shields.io/badge/-Performance-DA3633?style=flat-square" />
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+<a href="https://github.com/hak2881/ai-experience-platform"><img src="https://img.shields.io/badge/ai--experience--platform-0D1117?style=for-the-badge&logo=openaigym&logoColor=58A6FF" /></a>
+
+**AI 포토 키오스크** 전 구간.
+유료·비멱등 작업용 잡 큐, 자격증명 없는 미디어 서빙, 카메라 제어.
+
+<img src="https://img.shields.io/badge/-3_cases-30363D?style=flat-square" /> <img src="https://img.shields.io/badge/-FastAPI-009688?style=flat-square" /> <img src="https://img.shields.io/badge/-Amazon_S3-569A31?style=flat-square" /> <img src="https://img.shields.io/badge/-C%23-512BD4?style=flat-square" />
+
+</td>
+<td width="50%" valign="top">
+
+<a href="https://github.com/hak2881/platform-tooling"><img src="https://img.shields.io/badge/platform--tooling-0D1117?style=for-the-badge&logo=gnometerminal&logoColor=768390" /></a>
+
+**내부 인프라**.
+문서 디자인 시스템, 승인 게이트 에이전트 파이프라인, 소규모 서비스 표준 형태.
+
+<img src="https://img.shields.io/badge/-3_cases-30363D?style=flat-square" /> <img src="https://img.shields.io/badge/-Design_System-EC4899?style=flat-square" /> <img src="https://img.shields.io/badge/-AI_Agents-8957E5?style=flat-square" /> <img src="https://img.shields.io/badge/-Docker-2496ED?style=flat-square" />
 
 </td>
 </tr>
 </table>
-
-| 레포 | 내용 |
-|---|---|
-| **[commerce-backend-msa](https://github.com/hak2881/commerce-backend-msa)** | 커머스 플랫폼 뒤의 백엔드 마이크로서비스 — Go·Python, 서비스 경계, 웹훅 멱등성, 서비스 6개를 배포 1개로 합치는 판단 |
-| **[loyalty-ledger-systems](https://github.com/hak2881/loyalty-ledger-systems)** | 포인트·등급·리워드 — append-only 원장, 정수 금액, 예약-확정 차감, 등급 개편 사전 시뮬레이션 |
-| **[erp-integration-patterns](https://github.com/hak2881/erp-integration-patterns)** | ERP 앞에 B2B 스토어프론트 붙이기 — 주문 동기화, 해상 운임 견적, 스케줄 재고 대사 |
-| **[storefront-engineering](https://github.com/hak2881/storefront-engineering)** | 브랜드 1,067개 마켓플레이스 테마 — 공유 파일 분해, AJAX 필터 상태, 네이티브 전환 3회 실패 기록 |
-| **[ai-experience-platform](https://github.com/hak2881/ai-experience-platform)** | AI 포토 키오스크 — 유료·비멱등 작업용 잡 큐, 자격증명 없이 미디어 서빙, 데스크톱 앱의 카메라 제어 |
-| **[platform-tooling](https://github.com/hak2881/platform-tooling)** | 내부 인프라 — 문서 디자인 시스템, 승인 게이트가 있는 에이전트 파이프라인, 소규모 서비스 표준 형태 |
 
 <br/>
 
