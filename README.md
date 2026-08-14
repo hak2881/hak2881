@@ -1,47 +1,90 @@
-# hak2881
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:1F6FEB,100:58A6FF&height=200&section=header&text=hak2881&fontSize=60&fontColor=FFFFFF&fontAlignY=36&desc=Backend%20Engineer%20·%20Commerce%20Platforms&descAlignY=58&descSize=18" />
 
-Backend engineer. I build the systems that sit behind hosted commerce platforms — the part that handles money, identity, and integration with whatever the business already runs on.
+<div align="center">
 
-Most of my work is under NDA, so what is here is **written up rather than published**: architecture, the problems that actually cost time, the decisions and their tradeoffs. No client code, no credentials, no infrastructure identifiers.
+**커머스 플랫폼 뒤에 서는 백엔드를 만듭니다.**
+돈, 신원, 그리고 회사가 이미 돌리고 있는 시스템과의 연동을 다루는 부분.
 
-## Case studies
+</div>
 
-| Repository | What it covers |
-|---|---|
-| **[commerce-backend-msa](https://github.com/hak2881/commerce-backend-msa)** | Backend microservices behind Shopify Plus storefronts — Go and Python, service boundaries, webhook idempotency, when to consolidate six services into one deployable |
-| **[loyalty-ledger-systems](https://github.com/hak2881/loyalty-ledger-systems)** | Points, tiers, and rewards — append-only ledgers, integer money, reserve-and-confirm redemption, simulating a tier change before it ships |
-| **[erp-integration-patterns](https://github.com/hak2881/erp-integration-patterns)** | Putting a B2B storefront in front of an ERP — order sync, ocean freight quoting, scheduled inventory reconciliation |
-| **[storefront-engineering](https://github.com/hak2881/storefront-engineering)** | A 1,067-brand marketplace theme — breaking up shared files, AJAX filter state, and three documented failures at platform-native offloading |
-| **[ai-experience-platform](https://github.com/hak2881/ai-experience-platform)** | An AI photo kiosk — a job queue for paid non-idempotent work, serving media without storage credentials, camera control from a desktop app |
-| **[platform-tooling](https://github.com/hak2881/platform-tooling)** | Internal infrastructure — a document design system, an agent pipeline with an approval gate, a repeatable shape for small services |
+<br/>
 
-## What I work with
+## Stack
 
-**Languages** — Go, Python, TypeScript, C#
-**Backend** — chi · pgx · sqlc · goose · FastAPI · Django REST · Remix
-**Data** — PostgreSQL, Aurora Serverless, Redis, S3
-**Infra** — Kubernetes (EKS), Docker, AWS Lambda, GitHub Actions
-**Commerce** — Shopify Plus: Admin & Storefront APIs, webhooks, app proxy, checkout extensions, edge functions, themes
+<p>
+<img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" />
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" />
+</p>
 
-## How I think about this work
+<p>
+<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
+<img src="https://img.shields.io/badge/Remix-000000?style=for-the-badge&logo=remix&logoColor=white" />
+<img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+</p>
 
-**Money is stored as integers.** Every value system here uses an append-only ledger with amounts in the smallest unit. Balance is derived, never a column.
+<p>
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/Redis-FF4438?style=for-the-badge&logo=redis&logoColor=white" />
+<img src="https://img.shields.io/badge/Amazon%20S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white" />
+</p>
 
-**Idempotency belongs in the database.** A unique constraint on an idempotency key is correct under concurrency. An application-level "have we seen this?" check is correct until two webhook deliveries race — which is exactly what happens during a retry storm.
+<p>
+<img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" />
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white" />
+<img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" />
+<img src="https://img.shields.io/badge/Shopify-7AB55C?style=for-the-badge&logo=shopify&logoColor=white" />
+</p>
 
-**Boundaries and deployments are separate decisions.** One system here keeps six service boundaries in a single binary. Another deliberately refuses to split at all. Both were right for their traffic.
+<br/>
 
-**Negative results are deliverables.** Three documented failed attempts at moving load onto a platform were worth more to the client than a fourth attempt would have been.
+## Case Studies
 
-**Handover is part of the work.** Documentation with account IDs baked into it is documentation you can't hand to anyone.
+대부분의 작업이 NDA 하에 있어서, 여기 있는 것은 공개가 아니라 **기록**입니다 —
+아키텍처, 실제로 시간을 잡아먹은 문제, 내린 결정과 그 트레이드오프.
+클라이언트 코드·인증정보·인프라 식별자는 없습니다.
 
----
+<table>
+<tr>
+<td width="50%">
 
-## 한국어
+[![commerce-backend-msa](https://github-readme-stats.vercel.app/api/pin/?username=hak2881&repo=commerce-backend-msa&bg_color=00000000&text_color=768390&title_color=4493F8&icon_color=4493F8&border_color=30363D&description_lines_count=3)](https://github.com/hak2881/commerce-backend-msa)
 
-커머스 플랫폼 뒤에 서는 백엔드를 만듭니다 — **돈, 신원, 그리고 이미 회사가 돌리고 있는 시스템과의 연동**을 다루는 부분입니다.
+</td>
+<td width="50%">
 
-대부분의 작업이 NDA 하에 있어서, 여기 있는 것은 공개가 아니라 **기록**입니다 — 아키텍처, 실제로 시간을 잡아먹은 문제, 내린 결정과 그 트레이드오프. 클라이언트 코드·인증정보·인프라 식별자는 없습니다.
+[![loyalty-ledger-systems](https://github-readme-stats.vercel.app/api/pin/?username=hak2881&repo=loyalty-ledger-systems&bg_color=00000000&text_color=768390&title_color=4493F8&icon_color=4493F8&border_color=30363D&description_lines_count=3)](https://github.com/hak2881/loyalty-ledger-systems)
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+[![erp-integration-patterns](https://github-readme-stats.vercel.app/api/pin/?username=hak2881&repo=erp-integration-patterns&bg_color=00000000&text_color=768390&title_color=4493F8&icon_color=4493F8&border_color=30363D&description_lines_count=3)](https://github.com/hak2881/erp-integration-patterns)
+
+</td>
+<td width="50%">
+
+[![storefront-engineering](https://github-readme-stats.vercel.app/api/pin/?username=hak2881&repo=storefront-engineering&bg_color=00000000&text_color=768390&title_color=4493F8&icon_color=4493F8&border_color=30363D&description_lines_count=3)](https://github.com/hak2881/storefront-engineering)
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+[![ai-experience-platform](https://github-readme-stats.vercel.app/api/pin/?username=hak2881&repo=ai-experience-platform&bg_color=00000000&text_color=768390&title_color=4493F8&icon_color=4493F8&border_color=30363D&description_lines_count=3)](https://github.com/hak2881/ai-experience-platform)
+
+</td>
+<td width="50%">
+
+[![platform-tooling](https://github-readme-stats.vercel.app/api/pin/?username=hak2881&repo=platform-tooling&bg_color=00000000&text_color=768390&title_color=4493F8&icon_color=4493F8&border_color=30363D&description_lines_count=3)](https://github.com/hak2881/platform-tooling)
+
+</td>
+</tr>
+</table>
 
 | 레포 | 내용 |
 |---|---|
@@ -52,10 +95,39 @@ Most of my work is under NDA, so what is here is **written up rather than publis
 | **[ai-experience-platform](https://github.com/hak2881/ai-experience-platform)** | AI 포토 키오스크 — 유료·비멱등 작업용 잡 큐, 자격증명 없이 미디어 서빙, 데스크톱 앱의 카메라 제어 |
 | **[platform-tooling](https://github.com/hak2881/platform-tooling)** | 내부 인프라 — 문서 디자인 시스템, 승인 게이트가 있는 에이전트 파이프라인, 소규모 서비스 표준 형태 |
 
-**작업 원칙**
+<br/>
 
-- **돈은 정수로 저장합니다.** 모든 값 시스템이 최소 단위 정수 금액의 append-only 원장을 씁니다. 잔액은 파생되지, 컬럼이 아닙니다.
-- **멱등성은 DB에 있어야 합니다.** 멱등 키의 unique 제약은 동시성 하에서 옳습니다. 애플리케이션 레벨 "이거 본 적 있나?" 체크는 웹훅 두 건이 경합하기 전까지만 옳고, 그 경합은 정확히 재시도 폭주 때 일어납니다.
-- **경계와 배포는 별개의 결정입니다.** 여기 한 시스템은 서비스 경계 6개를 단일 바이너리에 유지합니다. 다른 하나는 의도적으로 쪼개기를 거부합니다. 각자의 트래픽에서 둘 다 맞았습니다.
-- **부정적 결과도 결과물입니다.** 플랫폼으로 부하를 옮기려다 실패한 3번의 기록이, 4번째 시도보다 고객사에 더 값어치 있었습니다.
-- **인계도 일의 일부입니다.** 계정 ID가 박힌 문서는 누구에게도 건넬 수 없는 문서입니다.
+## 작업 원칙
+
+> **돈은 정수로 저장합니다.**
+> 모든 값 시스템이 최소 단위 정수 금액의 append-only 원장을 씁니다. 잔액은 파생되지, 컬럼이 아닙니다.
+
+> **멱등성은 DB에 있어야 합니다.**
+> 멱등 키의 unique 제약은 동시성 하에서 옳습니다. 애플리케이션 레벨 "이거 본 적 있나?" 체크는 웹훅 두 건이 경합하기 전까지만 옳고, 그 경합은 정확히 재시도 폭주 때 일어납니다.
+
+> **경계와 배포는 별개의 결정입니다.**
+> 한 시스템은 서비스 경계 6개를 단일 바이너리에 유지합니다. 다른 하나는 의도적으로 쪼개기를 거부합니다. 각자의 트래픽에서 둘 다 맞았습니다.
+
+> **부정적 결과도 결과물입니다.**
+> 플랫폼으로 부하를 옮기려다 실패한 3번의 기록이, 4번째 시도보다 고객사에 더 값어치 있었습니다.
+
+> **인계도 일의 일부입니다.**
+> 계정 ID가 박힌 문서는 누구에게도 건넬 수 없는 문서입니다.
+
+<br/>
+
+---
+
+<div align="center">
+<sub>
+
+**In English** — Backend engineer building the systems behind hosted commerce platforms:
+money, identity, and integration with whatever the business already runs on.
+Most work is under NDA, so these are write-ups rather than published source —
+architecture, the problems that actually cost time, and the tradeoffs.
+No client code, credentials, or infrastructure identifiers.
+
+</sub>
+</div>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:58A6FF,50:1F6FEB,100:0D1117&height=120&section=footer" />
