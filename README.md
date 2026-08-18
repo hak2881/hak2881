@@ -274,40 +274,37 @@ Windows 키오스크 앱 + **C++ 카메라 SDK 사이드카**
 
 <br/>
 
-## 작업 원칙
+## 일하는 방식
 
-> **돈은 정수로 저장합니다.**
-> 모든 값 시스템이 최소 단위 정수 금액의 append-only 원장을 씁니다. 잔액은 파생되지, 컬럼이 아닙니다.
+**돈은 정수로만 다룹니다.**
+금액은 센트, 포인트는 100을 곱해서 정수로 저장합니다. 십진수로 바꾸는 건 화면에 뿌릴 때뿐입니다. 잔액도 컬럼에 들고 있지 않고 원장을 더해서 구합니다. 그래야 "이 잔액이 왜 이 숫자인가"를 항목 단위로 설명할 수 있고, 환불이 들어와도 이력을 지우지 않고 반대 부호 한 줄을 더하면 됩니다.
 
-> **멱등성은 DB에 있어야 합니다.**
-> 멱등 키의 unique 제약은 동시성 하에서 옳습니다. 애플리케이션 레벨 "이거 본 적 있나?" 체크는 웹훅 두 건이 경합하기 전까지만 옳고, 그 경합은 정확히 재시도 폭주 때 일어납니다.
+**중복은 DB가 막게 합니다.**
+웹훅은 반드시 두 번 옵니다. 코드에서 "이미 처리했나?"를 조회해서 거르는 방식은 두 건이 동시에 들어오면 뚫리고, 그 동시 유입은 하필 재시도가 몰릴 때 일어납니다. 멱등 키에 unique 제약을 걸어두면 재전송이 그냥 거절된 insert가 됩니다.
 
-> **경계와 배포는 별개의 결정입니다.**
-> 한 시스템은 서비스 경계 6개를 단일 바이너리에 유지합니다. 다른 하나는 의도적으로 쪼개기를 거부합니다. 각자의 트래픽에서 둘 다 맞았습니다.
+**쪼갤지 말지는 트래픽이 정합니다.**
+한 프로젝트는 서비스 경계 6개를 그대로 둔 채 배포만 하나로 합쳤고, 다른 프로젝트는 끝까지 쪼개지 않았습니다. 경계를 나누는 것과 따로 배포하는 것은 별개의 문제입니다. 파드 6개와 커넥션 풀 6벌이 필요 없는 트래픽에서 굳이 나눠 띄울 이유는 없습니다.
 
-> **부정적 결과도 결과물입니다.**
-> 플랫폼으로 부하를 옮기려다 실패한 3번의 기록이, 4번째 시도보다 고객사에 더 값어치 있었습니다.
-
-> **인계도 일의 일부입니다.**
-> 계정 ID가 박힌 문서는 누구에게도 건넬 수 없는 문서입니다.
+**남는 건 코드보다 기록입니다.**
+플랫폼으로 부하를 되돌리려다 세 번 실패했습니다. 그 실패 원인을 정리한 문서가 네 번째 시도보다 고객사에 도움이 됐습니다. 같은 논의가 반년마다 다시 올라오는 걸 막아줬으니까요. 인계도 비슷합니다. 계정 ID가 박혀 있으면 애초에 넘길 수 없는 문서라, 식별자를 전부 분리해서 정리했습니다.
 
 <br/>
 
 ---
 
-<div align="center">
-<sub>
+## In English
 
-**In English** — Backend engineer building the systems behind hosted commerce platforms:
-money, identity, and integration with whatever the business already runs on.
-Work spans a 1,067-brand fashion marketplace, a global dashcam manufacturer's dual-channel D2C,
-a multi-level referral reward ledger with cash withdrawal, two sports brands' membership programs,
-a B2B ingredient supplier's ERP integration, and an AI photo kiosk platform.
-Most of it is under NDA, so these are write-ups rather than published source —
-architecture, the problems that actually cost time, and the tradeoffs.
-No client code, credentials, or infrastructure identifiers.
+Backend engineer working on the systems behind hosted commerce platforms — money, identity, and integration with whatever the business already runs on.
 
-</sub>
-</div>
+Recent work includes:
+
+- a **1,067-brand fashion marketplace** storefront and the ten services behind it
+- **dual-channel D2C** for a global dashcam manufacturer, serving dealers and consumers
+- a **multi-level referral reward ledger** whose balance is withdrawable as cash
+- **membership programs for two sports brands** on a platform with no native tier support
+- **ERP integration** for a B2B ingredient supplier, from order sync to ocean freight quoting
+- an **AI photo kiosk platform**, from camera control to the public result page
+
+Most of it is under NDA, so these repositories are write-ups rather than published source: the architecture, the problems that actually cost time, and the reasoning behind each tradeoff. No client code, credentials, or infrastructure identifiers.
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:58A6FF,50:1F6FEB,100:0D1117&height=120&section=footer" />
