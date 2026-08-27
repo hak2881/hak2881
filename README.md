@@ -1,4 +1,4 @@
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:1F6FEB,100:58A6FF&height=190&section=header&text=ByungHak%20Kim&fontSize=52&fontColor=FFFFFF&fontAlignY=36&desc=Backend%20%26%20Cloud%20Engineer%20%C2%B7%20Go%20%C2%B7%20Python%20%C2%B7%20AWS&descAlignY=58&descSize=18" />
+<img width="100%" src="./assets/header.svg" alt="ByungHak Kim — Backend &amp; Cloud Engineer · Go · Python · AWS" />
 
 <div align="center">
 
@@ -94,4 +94,4 @@ Commerce is the domain in which I have the deepest production experience, not th
 
 The client systems are private, so the repositories above are sanitized case studies and independently written executable examples. They contain no client source, credentials, account IDs, or infrastructure identifiers.
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:58A6FF,50:1F6FEB,100:0D1117&height=110&section=footer" />
+<img width="100%" src="./assets/footer.svg" alt="" />
